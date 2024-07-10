@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<Style>
+    
+
+* {
+    box-sizing: border-box;
+   }
+
+
+a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+h1 {
+    font-size: 2rem;
+     }
+
+h2 {
+    font-size: 1.75rem;
+  }
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+   }
+
+h4 {
+    font-size: 1.25rem;
+  }
+
+h5 {
+    font-size: 1.125rem;
+  }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 300;
+    width: auto;
+    height: auto;
+}
+    header {
+            background-color: white;
+            background-image: url('imagenes/luxa.org-opacity-changed-contador.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 0;
+            width: 100%;
+            min-height: 25vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        header h4 {
+            position: relative;
+            color: white;
+            font-weight: lighter;
+            font-size: 2.7vw;
+            margin: 0;
+            left: 5%;
+        }
+
+  header h6 {
+        color: white;
+        font-weight: lighter;
+        font-size: 1.5vw;
+        margin: 20px 0 0 0; /* Añadir margen superior para separar del h4 */
+        position: relative;
+        right: 0; /* Centramos de nuevo quitando el desplazamiento */
+    }
+        header button {
+            background-color: #228B22;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2vw;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header button:hover {
+            background-color: #34a075;
+        }
+
+.nav-desktop {
+    background-color: #3366cc;
+    padding: 10px;
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+.nav-logo {
+    /*5background-color: aqua;*/
+    padding: 0 0 0 25px;
+    width: auto;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.nav-logo:hover {
+    transform: translate(0, 0) scale(1.04);
+    transform-origin: center bottom;
+}
+
+.nav-logo svg:hover {
+    box-shadow: 5px 10px 10px rgba(56, 56, 56, 1);
+}
+
+.nav-separator {
+    margin: 0 15px;
+    background-color: #333333;
+    display: flex;
+    width: 1px;
+    height: 1.5em;
+}
+
+.nav-desktop ul {
+    padding: 0 20px 0 0;
+    /*background-color: aquamarine;*/
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: right;
+    min-height: inherit;
+    margin: 0 0 0 auto;
+  }
+
+.nav-desktop li {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+.feat-link a {
+        color: white;
+
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    border-style: 1px solid black;
+    transition: all 0.3s;
+    transition-timing-function: ease;
+
+  }
+
+.feat-link a:hover {
+    box-shadow: 2.5px 4px rgb(51, 51, 51);
+    transform: translate(-2px, -2px);
+    border-style: 1px solid black;
+    /* font-weight: 600; */
+  }
+
+.grey-link a {
+    padding: 5px 15px;
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    color: white;
+    transition: all 0.3s;
+    transition-timing-function: ease-out;
+    /*align-items: center;*/
+  }
+
+.grey-link a:hover {
+    /* font-weight: 500; */
+    box-shadow: 2.5px 4px rgb(63, 178, 139);
+    transform: translate(0, -2px);
+  }
+
+.nav-responsive {
+    background-color: white;
+    padding: 10px 15px;
+    width: 100vw;
+    min-height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav-logo-resp {
+    background-image: url(assets/icons/errotuz_logo_resp.svg);
+    /* background-color: #333; */
+    height: 32px;
+    width: 31px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    z-index: 2;
+}
+
+/* .nav-logo-resp a {
+    display: flex;
+} */
+
+.hamburger {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
+    height: 21px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    cursor: pointer;
+}
+
+.rectangle {
+  display: flex;
+  background-color: #bbbbbb;
+  height: 4px;
+  width: 100%;
+}
+
+.dropdown-menu {
+    background-color: #f0f0f0;
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.dropdown-menu.visible {
+    background-color: #fff;
+    box-shadow: 4px 12px 20px rgba(3, 38, 43, 0.164); 
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+    pointer-events: unset;
+}
+
+@media screen and (min-width: 850px) {
+    .nav-responsive {
+        display: none;
+    }
+
+    .dropdown-menu.visible {
+        display: none;
+    }
+
+}
+
+.dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown-menu li:active {
+    background-color: #3fb28b;
+}
+
+.dropdown-menu li:active a {
+    color: white;
+} 
+ #correos {
+            height: 40px; /* Ajusta la altura según sea necesario */
+            background-color: white     ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-sizing: border-box;
+            color: black;
+            font-size: 14px;
+        }
+        .contacto-item {
+            display: flex;
+            align-items: center;
+        }
+        .contacto-item img {
+            width: 20px; /* Ajusta el tamaño de las imágenes según sea necesario */
+            height: 20px;
+            margin-right: 5px;
+        }
+#LOGO{
+width: 60%;
+height: 70%;
+
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #FEFFFF;
+}
+
+*::selection{
+  outline: none;
+}
+
+/*MENU*/
+.nav{
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  z-index: 999;
+}
+
+.menu{
+  margin: 0 30px 0 0;
+}
+
+.menu a{
+  clear: right;
+  text-decoration: none;
+  color: #FEFFFF;
+  margin: 0 10px;
+  line-height: 70px;
+  letter-spacing: .9px;
+  text-transform: uppercase;
+  transition: all 250ms ease;
+}
+
+@keyframes strike{
+  0%   { width : 0; }
+  100% { width: 100%; }
+}
+
+.strike {
+  position: relative;
+}
+
+.strike:hover:after {
+  content: ' ';
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #FEFFFF;
+  animation-name: strike;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.menu h5{
+  margin: 0 30px;
+  text-transform: uppercase;
+  float: left;
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 999;
+  color: #FEFFFF;
+}
+
+label{
+  margin: 0 20px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+  color: #354757;
+}
+
+#toggle{
+  display: none;
+}
+
+.fixed{
+  background-color: #FEFFFF;
+}
+
+.photo{
+  width: 100%;
+  height: 700px;
+  position: relative;
+  background: url('imagenes/serv.jpg') center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.photo-text{
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.overlay{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 200vh;
+  top: 0;
+  left: 0;
+  background: rgba(60, 63, 114, .6);
+}
+
+.photo h4{
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #FEFFFF;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+.photo p{
+  width: 60%;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #D7DADE;
+  position: relative;
+  z-index: 5;
+}
+
+.content{
+  width: 100%;
+  min-height: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+.content:before{
+  content: '';
+  width: 50%;
+  height: 110px;
+  position: absolute;
+  top: -48px;
+  left: 0;
+  background-color: #FEFFFF;
+  transform: skewY(5.5deg);/*8*/
+}
+
+.content:after{
+  content: '';
+  width: 50%;
+  height: 110px;
+  position: absolute;
+  top: -48px;
+  right: 0;
+  background-color: #FEFFFF;
+  transform: skewY(-5.5deg);/*8*/
+}
+
+.grand-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+  width: 60%;
+  min-height: 100px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.grand-title h4{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  margin: 30px;
+  color: #354757;
+}
+
+.grand-title h4:after{
+  content: '';
+  display: block; 
+  width: 5%;
+  height: 3px;
+  margin: 25px auto;
+  border: 0;
+  background: #E58859;
+}
+
+.text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -10px;
+  position: relative;
+  z-index: 999;
+}
+
+.inner-text{
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: 20px;
+  width: 300px;
+  margin: 10px 0 10px 0;
+  transition: all 450ms ease;
+}
+
+.inner-text:hover{
+  cursor: pointer;
+  box-shadow: -1px 6.5px 15px rgba(208, 211, 214, 0.75);
+}
+
+.ic{
+  font-size: 35px;
+  color: #EBA675;
+  transition: all 250ms ease;
+}
+
+.ic:hover{
+ opacity: .7;
+}
+
+.inner-text h3{
+  color: #299FFF;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+}
+
+.inner-text h5{
+  color: #6D85A8;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.inner-text p{
+  color: #6D85A8;
+}
+
+.inner-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+}
+
+.boxy:nth-child(1){
+  width: 50%;
+  min-height: 600px;
+  background: url('http://img.fenixzone.net/i/dxmDY9u.png') bottom no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 999;
+}
+
+.boxy:nth-child(2){
+  width: 50%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+#slider{
+  overflow: hidden;
+  margin-left: -20px;
+}
+
+#slider figure ul li{
+  width: 20%;
+  float: left;
+  list-style: none;
+  text-align: center;
+}
+
+ul li img{
+  border-radius: 50%;
+  padding: 10px;
+}
+
+ul li h4{
+  color: #354757;
+  font-weight: 300;
+  font-size: 25px;
+}
+
+ul li p{
+  font-size: 20px;
+  width: 80%;
+  margin: 0 auto;
+  color: #6D85A8;
+}
+
+#slider figure{
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  animation-name: slider;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-delay: -10s;
+    animation-iteration-count: infinite;
+   /*animation-direction: alternate;*/
+}
+
+/*Portafolio*/
+.portafolio{
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: -35px;
+  margin-bottom: 40px;
+}
+
+.portafolio h4{
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  color: #354757;
+  letter-spacing: 1.2px;
+}
+
+.portafolio h4:after{
+  content: '';
+  display: block; 
+  width: 3%;
+  height: 3px;
+  margin: 20px auto;
+  border: 0;
+  background: #E58859;
+}
+
+.portafolio-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.portafolio-item{
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  border-radius: .20em;
+}
+
+.portafolio-item img{
+  width: 100%;
+}
+
+.portafolio-text{
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background: rgba(254, 255, 255, .8);
+  color: #FDFDFD;
+  transform: translateY(100%);
+  transition: all 450ms ease;
+}
+
+.portafolio-text h5{
+  color: #299FFF;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 0;
+}
+
+.portafolio-text p{
+  text-align: justify;
+  color: #6D85A8;
+}
+
+.portafolio-item:hover .portafolio-text{
+  transform: translateY(0);
+}
+
+.portafolio-img{
+  transition: all 450ms ease;
+}
+
+.portafolio-item:hover .portafolio-img{
+  transform: rotate(-5deg) scale(1.15);
+}
+
+/*FOOTER*/
+.footer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 500px;
+  width: 100%;
+}
+
+.footer h4{
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  margin: 30px;
+  color: #354757;
+}
+
+.footer h4:after{
+  content: '';
+  display: block; 
+  width: 25%;
+  height: 3px;
+  margin: 20px auto;
+  border: 0;
+  background: #E58859;
+}
+
+.container{
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container *{
+  box-sizing: border-box;
+}
+
+.flex-outer,
+.flex-inner{
+  list-style-type: none;
+  padding: 0;
+}
+
+.flex-outer{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flex-outer li,
+.flex-inner{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner{
+  padding: 0 8px;
+  justify-content: space-between;  
+}
+
+.flex-outer > li:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.flex-outer li label{
+  padding: 8px;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.flex-outer > li > label{
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.flex-outer > li > label + *,
+.flex-inner{
+  flex: 1 0 220px;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li textarea{
+  padding: 15px;
+  resize: none;
+}
+
+.flex-outer li button{
+  background: 0 0 #FEFFFF;
+  border: 1px solid #6D85A8;
+  border-radius: 3px;
+  color: #6D85A8;
+  font-size: 16px;
+  line-height: inherit;
+  margin: 30px 0;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  transition: all 0.25s ease 0s;
+}
+
+.flex-outer li button:hover,
+.flex-outer li button:active,
+.flex-outer li button:focus {
+	border-color: #299FFF;
+	color: #299FFF;
+}
+
+.flex-inner li{
+  width: 100px;
+}
+
+.rect{
+	border-color: #6D85A8;
+  border-width: 0 0 1px 0;
+  border-style: none none solid none;
+  box-shadow: none;
+}
+
+.rect:focus{
+	box-shadow: none;
+	border-color: #60A9F1;
+  outline: none;
+}
+
+.center{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-outer li ::placeholder{
+  font-size: 12px;
+  color: #6D85A8;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.flex-outer li ::-webkit-input-placeholder{
+  font-size: 12px;
+  color: #6D85A8;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.flex-outer li ::-moz-placeholder{
+  font-size: 12px;
+  color: #6D85A8;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.flex-outer li ::-ms-input-placeholder{
+  font-size: 12px;
+  color: #6D85A8;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.flex-outer li ::-moz-placeholder{
+  font-size: 12px;
+  color: #6D85A8;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: 950px){
+  .portafolio-container{
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  
+  .portafolio-item{width: 80%; margin-top: 10px;}
+}
+
+@media screen and (max-width: 950px){
+  .photo p{width: 90%;}
+  .grand-title{width: 90%;}
+  .text{flex-direction: column;}
+  .inner-content{flex-flow: column wrap;}
+  .boxy:nth-child(1),.boxy:nth-child(2){width: 90%;}/*GENERA PROBLEMA*/
+  .boxy:nth-child(1){padding: 10px;}
+  #slider{margin-left: -55px;}
+}
+
+@media only screen and (max-width: 600px){
+  label{
+    display: block;
+    cursor: pointer;
+  }
+  .menu{
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  .menu a{
+    display: block;
+    border-bottom: 1px solid #EAEAEB;
+    margin: 0;
+    color: #6D85A8;
+  }
+  #toggle:checked + .menu{display: block; background-color: #FEFFFF;}
+}
+
+@media screen and (max-width: 500px){
+  #slider{margin-left: -55px;}
+  .photo-text h4{font-size: 45px;}
+  .inner-text{width: 80%;}
+  
+}
+
+@keyframes slider{
+  0%{left: 0; opacity: 0;}
+  20%{left: 0; opacity: 1;}
+  25%{left: -100%; opacity: .8;}
+  45%{left: -100%; opacity: .8;}
+  50%{left: -200%; opacity: .7;}
+  70%{left: -200%; opacity: .7;}
+  75%{left: -300%; opacity: .6;}
+  95%{left: -400%; opacity: .6;}
+  100%{left: -400%; opacity: 1;}
+}
+#aca{
+    font-size: 30px;
+}
+ .inner-text-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .inner-text {
+      flex: 0 1 30%;
+      box-sizing: border-box;
+      margin: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      cursor: pointer;
+    }
+    .inner-text:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .service-icon {
+      font-size: 40px;
+      color: #007BFF;
+      margin-bottom: 15px;
+    }
+    .inner-text a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .inner-text h3 {
+      font-size: 20px;
+      color: #007BFF;
+    }
+    .inner-text h5 {
+      font-size: 16px;
+      color: #555;
+    }
+    .inner-text p {
+      font-size: 14px;
+      color: #777;
+    }
+    .portafolio {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.portafolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portafolio-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+  overflow: hidden;
+  width: 300px; /* Puedes ajustar el ancho según tus necesidades */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portafolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portafolio-img {
+  width: 100%;
+  height: 70%;
+  display: block;
+}
+
+.portafolio-text {
+  padding: 15px;
+  text-align: center;
+}
+
+.portafolio-text h5 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.portafolio-text p {
+  margin: 0;
+  color: #666;
+}
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #01284E;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.footer-column h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.footer-column p, .footer-column ul, .footer-column a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #E58859;
+}
+
+.social-media {
+    display: flex;
+}
+
+.social-media a {
+    font-size: 20px;
+    margin-right: 10px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #E58859;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #666;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+ .inner-text h3 {
+      color: black; /* Cambiar a tu color deseado */
+          font-weight: bold; /* Texto en negrita */
+
+    }
+        .icon-financial { color: blue; } /* Color para Elaboración de Estados Financieros */
+    .icon-rut { color: green; } /* Color para Registro y Actualización del RUT */
+    .icon-tax { color: red; } /* Color para Declaraciones Tributarias */
+    .icon-magnetic { color: purple; } /* Color para Medios Magnéticos Nacionales y Distritales */
+    .icon-compensation { color: orange; } /* Color para Compensación y Devolución de Saldos a Favor */
+    .icon-societies { color: teal; } /* Color para Informes a Superintendencias de Sociedades */
+    .icon-invoice { color: brown; } /* Color para Facturación Electrónica */
+    .icon-payroll { color: pink; } /* Color para Nómina Electrónica */
+    .icon-registration { color: cyan; } /* Color para Renovación de Matrícula en Cámara de Comercio */
+    .icon-audit { color: gold; }
+
+
+*{
+
+  font-family: "Roboto", sans-serif;
+
+
+}
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i');
+
+
+ 
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  
+ 
+    #ehas {
+        position: relative;
+        left: -84%;
+        top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+
+.nav-responsive {
+    background-color: #3366cc;
+    padding: 10px 20px;
+    width: 100vw;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover .rectangle {
+    background-color: #fff;
+}
+
+.rectangle {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu.visible {
+    opacity: 1;
+    pointer-events: all;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+.dropdown-menu li a:hover {
+    color: #3366cc;
+}
+
+@media screen and (max-width: 850px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .nav-responsive {
+        display: none;
+    }
+}
+
+.hamburger.open .rectangle:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .rectangle:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .rectangle:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-logo-resp img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-responsive a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-responsive a:hover {
+    color: #ffcc00;
+}
+
+
+
+
+.menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+
+
+.menu a:hover {
+    color: #f4f4f9;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.overlayy {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        background: #413d4b;
+        transition: right 0.3s ease-in-out;
+        z-index: 10;
+        padding-top: 60px;
+    }
+
+    .menu li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .menu a {
+        font-size: 22px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.show {
+        right: 0;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu {
+        display: flex !important;
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#servi{
+
+  z-index: 4;
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos específicos para dispositivos móviles */
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    #myCarousel {
+        display: none; /* Oculta el carrusel en dispositivos móviles */
+    }
+
+    .mobile-header {
+      z-index: 999;
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        color: white;
+    }
+
+    .mobile-header img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Asegura que la imagen cubra el área disponible */
+    }
+
+  
+
+    /* Estilos para la navegación translúcida */
+    .nav-responsive {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+        z-index: 999; /* Asegura que la navegación esté por encima de la imagen */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+  
+
+   
+  
+
+
+   
+
+ 
+
+    .nav-responsive .overlay {
+
+        position: fixed;
+        top: 0;
+        left: 0;
+      
+        background: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+        z-index: 5;
+        display: none;
+    }
+
+    .nav-responsive .overlay.show {
+        display: block;
+    }
+}
+
+/* Estilos para escritorio */
+@media only screen and (min-width: 769px) {
+    .mobile-header {
+        display: none; /* Oculta la imagen estática en escritorio */
+    }
+
+    .nav-responsive {
+        display: none; /* Oculta la navegación responsive en escritorio */
+    }
+    #corro{
+
+    }
+    
+footer{
+    display: none;
+}
+
+h6{
+
+font-size: 100px;
+
+}
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .foooter{
+        display: none;
+    }
+
+h6{
+
+font-size: 100px;
+
+}
+
+
+#correos{
+display: none;
+}
+
+
+
+
+.footer{
+    display: none;
+}
+
+
+
+
+
+
+ }
+
+
+/* Media query para dispositivos móviles */
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .inner-text {
+    font-size: 1.2em; /* Ajusta el tamaño del texto */
+    padding: 20px;    /* Ajusta el relleno */
+    max-width: 100%;  /* Asegura que las cartas ocupen todo el ancho disponible */
+    min-height: 300px; /* Ajusta la altura mínima de las cartas */
+    box-sizing: border-box; /* Asegura que el relleno esté incluido en el tamaño total */
+  }
+
+  .service-icon {
+    font-size: 2.5em; /* Ajusta el tamaño del icono */
+    margin-bottom: 15px; /* Ajusta el margen inferior del icono */
+  }
+
+  .inner-text h3 {
+    font-size: 1.5em; /* Ajusta el tamaño del título */
+    margin: 10px 0; /* Ajusta el margen */
+  }
+
+  .text-box h5 {
+    font-size: 1em; /* Ajusta el tamaño del subtítulo */
+    margin: 10px 0; /* Ajusta el margen */
+  }
+
+  .text-box p {
+    font-size: 0.9em; /* Ajusta el tamaño del párrafo */
+    margin: 5px 0; /* Ajusta el margen */
+  }
+  header{
+position: relative;
+top: 50px;
+  }
+
+.footer-content{
+    display: none;
+}
+
+
+.contact-info{
+    position: relative;
+    top: 50px;
+}
+h6{
+
+font-size: 100px;
+
+}
+  header h6 {
+        color: white;
+        font-weight: lighter;
+        font-size: 5.9vw;
+        margin: 20px 0 0 0; /* Añadir margen superior para separar del h4 */
+        position: relative;
+        right: 0; /* Centramos de nuevo quitando el desplazamiento */
+    }
+    .boxy{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+</Style>
+<body>
+
+
+
+
+
+
+        <section id="correos">
+        <div class="contacto-item">
+            <img src="imagenes/gmail.png" alt="Correo">
+            <h5 id="micorreo">andreafrancocontadora@gmail.com</h5>
+        </div>
+        <div class="contacto-item">
+            <img src="imagenes/llamada.png" alt="Teléfono">
+            <span>3223958005 </span>
+        </div>
+    </section>
+
+
+
+
+
+  
+<nav class="nav-responsive">
+    <div class="menu-toggle" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+                <img class="nav-logo" id="LOGO" src="/imagenes/LOGOJENIFEEER-removebg-preview.png" alt="Logo">
+    <div class="overlay" id="overlay"></div>
+    <div class="container">
+        <ul class="menu" id="menu">
+            <li><a href="/principal">Inicio</a></li>
+            <li><a href="/servicios">Servicios</a></li>
+            <li><a href="/informacion">Nosotros</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<nav class="nav-desktop">
+    <a href="index.html">
+<div class="logo-box">
+    <img class="nav-logo"  id="LOGO" src="imagenes/LOGO JENIFER.png" alt="Logo">
+</div>
+
+    </a>
+                
+    <ul>
+        <li class="feat-link"><a href="/principal">INICIO</a></li>
+        <li class="feat-link"><a href="/servicios">SERVICIOS</a></li>
+        <div class="nav-separator"></div>
+        <li class="grey-link"><a href="/informacion">INFORMACION</a></li>
+        <li class="grey-link"><a href="/contacto">CONTACTENOS</a></li>
+    </ul>
+</nav>
+
+
+
+<section class="photo" id="inicio">
+  
+  
+  </div>
+</div>
+
+
+
+
+
+
+  <div class="photo-text">
+ <h4 data-ix="skype">SERVICIOS</h4>
+  <p id="aca" data-ix="subtitle-hero-up">Aca veras todos nuestros servicios para obtener más información, selecciona el servicio </p>
+  <div class="overlay"></div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+  
+  <section class="content">
+    <div class="grand-title" id="servicio">
+      <h4 data-ix="slowfade-scroll-bigs">SELECCIONA EL SERVICIO QUE NECESITAS</h4>
+    </div>
+    <div class="text">
+      <div class="inner-text-container">
+        <!-- Aquí comienza la lista de servicios -->
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Elaboración%20de%20Estados%20Financieros" target="_blank">
+            <i class="fas fa-chart-line service-icon icon-financial"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Elaboración de Estados Financieros</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Servicio profesional para la elaboración de estados financieros precisos y confiables.</p>
+            </div>
+          </a>
+        </div>
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Registro%20y%20Actualización%20del%20RUT" target="_blank">
+            <i class="fas fa-file-alt service-icon icon-rut"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Registro y Actualización del RUT</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Gestión eficiente del Registro Único Tributario (RUT) y actualización de datos.</p>
+            </div>
+          </a>
+        </div>
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Declaraciones%20Tributarias" target="_blank">
+            <i class="fas fa-file-invoice-dollar service-icon icon-tax"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Declaraciones Tributarias</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Preparación y presentación de declaraciones de renta, retención en la fuente, IVA e ICA.</p>
+            </div>
+          </a>
+        </div>
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Medios%20Magnéticos%20Nacionales%20y%20Distritales" target="_blank">
+            <i class="fas fa-database service-icon icon-magnetic"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Medios Magnéticos Nacionales y Distritales</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Presentación de informes de medios magnéticos a nivel nacional y distrital.</p>
+            </div>
+          </a>
+        </div>
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Compensación%20y%20Devolución%20de%20Saldos%20a%20Favor" target="_blank">
+            <i class="fas fa-hand-holding-usd service-icon icon-compensation"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Compensación y Devolución de Saldos a Favor</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Gestión de compensación y devolución de saldos a favor por impuestos.</p>
+            </div>
+          </a>
+        </div>
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Informes%20a%20Superintendencias%20de%20Sociedades" target="_blank">
+            <i class="fas fa-building service-icon icon-societies"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Informes a Superintendencias de Sociedades</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Elaboración y presentación de informes a las superintendencias de sociedades.</p>
+            </div>
+          </a>
+        </div>
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Facturación%20Electrónica" target="_blank">
+            <i class="fas fa-file-invoice service-icon icon-invoice"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Facturación Electrónica</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Implementación y gestión de facturación electrónica según normativas vigentes.</p>
+            </div>
+          </a>
+        </div>
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Nómina%20Electrónica" target="_blank">
+            <i class="fas fa-money-check-alt service-icon icon-payroll"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Nómina Electrónica</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Gestión de nómina electrónica con cumplimiento de normativas laborales.</p>
+            </div>
+          </a>
+        </div>
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Renovación%20de%20Matrícula%20en%20Cámara%20de%20Comercio" target="_blank">
+            <i class="fas fa-registered service-icon icon-registration"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Renovación de Matrícula en Cámara de Comercio</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Servicio de renovación de matrícula mercantil en la cámara de comercio correspondiente.</p>
+            </div>
+          </a>
+        </div>
+        <div class="inner-text">
+          <a href="https://wa.me/573223958005?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Revisoría%20Fiscal%20y%20Control%20Interno" target="_blank">
+            <i class="fas fa-shield-alt service-icon icon-audit"></i>
+            <h3 data-ix="slowfade-scroll-bigs">Revisoría Fiscal y Control Interno</h3>
+            <div class="text-box">
+              <h5 data-ix="slowfade-scroll-bigs">SELECCIONE PARA OBTENER MAS INFORMACION</h5>
+              <p data-ix="slowfade-scroll-bigs">Servicios de revisoría fiscal y control interno para asegurar la integridad de los procesos financieros.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="inner-content">
+    <div class="boxy"></div>
+    <div class="boxy">
+      <div id="slider">
+<figure>
+  <ul>
+    <li>
+      <h4>Excelente Servicio</h4>
+      <p style="font-size: 24px; color: gold;">★★★★★</p>
+      <p>La asesoría contable fue excepcional. Me ayudaron a ordenar mis finanzas de manera efectiva y profesional. - Juan Pérez, Gerente Financiero en TechCorp</p>
+    </li>
+    <li>
+      <h4>Altamente Recomendado</h4>
+      <p style="font-size: 24px; color: gold;">★★★★★</p>
+      <p>El equipo mostró un gran conocimiento y atención al detalle. Estoy muy satisfecho con los resultados. - María García, Directora de Contabilidad en Innovatech</p>
+    </li>
+    <li>
+      <h4>Gran Experiencia</h4>
+      <p style="font-size: 24px; color: gold;">★★★★★</p>
+      <p>Recibí un servicio personalizado y profesional. Mi negocio ha mejorado gracias a su asesoramiento contable. - Carlos Rodríguez, Jefe de Finanzas en Global Solutions</p>
+    </li>
+    <li>
+      <h4>Muy Profesionales</h4>
+      <p style="font-size: 24px; color: gold;">★★★★★</p>
+      <p>El servicio fue rápido y eficiente. Me proporcionaron soluciones claras y efectivas para mis problemas contables. - Ana López, Coordinadora de Contabilidad en MegaCorp</p>
+    </li>
+  </ul>
+</figure>
+
+
+      </div>
+    </div>
+  </div>
+
+<section class="portafolio" id="trabajo">
+  <h4 data-ix="slowfade-scroll-bigs">Trabajos Realizados</h4>
+  <div class="portafolio-container">
+    <section class="portafolio-item">
+<img src="imagenes/auditoria.jpeg" alt="Reestructuración Contable para ABC Ltd" class="portafolio-img"/>
+      <section class="portafolio-text">
+        <h5>Auditoría Financiera para XYZ Corp</h5>
+        <p>Realizamos una auditoría financiera completa para XYZ Corp, asegurando la transparencia y exactitud de sus estados financieros.</p>
+      </section>
+    </section>
+    <section class="portafolio-item">
+      <img src="imagenes/restr.jpg" alt="Reestructuración Contable para ABC Ltd" class="portafolio-img"/>
+      <section class="portafolio-text">
+        <h5>Reestructuración Contable para ABC Ltd</h5>
+        <p>Gestionamos la reestructuración contable de ABC Ltd, mejorando su eficiencia fiscal y operativa.</p>
+      </section>
+    </section>
+    <section class="portafolio-item">
+      <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" alt="Optimización Tributaria para 123 Enterprises" class="portafolio-img"/>
+      <section class="portafolio-text">
+        <h5>Optimización Tributaria para 123 Enterprises</h5>
+        <p>Implementamos estrategias de optimización tributaria para 123 Enterprises, reduciendo su carga fiscal y mejorando su flujo de caja.</p>
+      </section>
+    </section>
+  </div>
+</section>
+
+</section>
+
+</div>
+</div>
+
+   <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-envelope"></i> andreafrancocontadora@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i> 3223958005</p>
+                <p><i class="fab fa-whatsapp"></i> +57 3223958005</p>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="/principal">Inicio</a></li>
+                    <li><a href="/servicios">Servicios</a></li>
+                    <li><a href="/informacion">Información</a></li>
+                    <li><a href="/contacto">Contáctenos</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Síguenos</h4>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/profile.php?id=61562022058872&mibextid=LQQJ4d"><i class="fab fa-facebook-f"></i></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Asesor Contable. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/scripts.js" defer></script>
+
+
+</body>
+<Script>
+    $(document).ready(function(){
+  $('#slider').fadeIn('slow').delay(200);
+  $("#sticker").sticky({topSpacing:0});
+});
+
+//https://dribbble.com/shots/3581904-HEALTHEX-Day-01
+
+//SMOOTH SCROLL MENU
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {  
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+
+//FIXED MENU COLORS
+$(document).ready(function(){
+  $(window).trigger('scroll');
+  $(window).bind('scroll', function () {
+    var pixels = 50; //pixeles abajo
+    if ($(window).scrollTop() > pixels) {
+  $('.nav').addClass('fixed');
+      $('.menu a').css({"color":"#354757"});
+      $('.logo').css({"color":"#354757"});
+    } else {
+      $('.nav').removeClass('fixed');
+      $('.menu a').css({"color":"#BABCBD"});
+      $('.logo').css({"color":"#BABCBD"});
+    }
+  }); 
+}); 
+
+
+$(document).ready(function(){
+  $('a[href^="#"]').on('click',function (e){
+    e.preventDefault();
+    var target = this.hash;
+    var $target = $(target);
+    
+    //scroll con hash
+    $('html, body').animate({
+      'scrollTop': $target.offset().top
+    }, 1000, 'swing', function(){
+      window.location.hash = target;
+    });
+    
+    //scroll sin hash
+    $('html, body').animte({
+      'scrollTop': $targer.offset().top
+      }, 1000, 'swing');
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    const overlayy = document.getElementById('overlayy');
+
+    menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('show');
+        overlayy.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', function () {
+        menu.classList.remove('show');
+        overlayy.classList.remove('show');
+    });
+});
+</Script>
+</html>

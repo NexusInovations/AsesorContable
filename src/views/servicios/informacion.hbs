@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información - Servicios Contables</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <style>
+        * {
+            font-family: "Roboto", sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #3366cc;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        h2, h3 {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #01284E;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: #3366cc;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .image-section {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #3366cc;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer-content p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .nav-desktop {
+            background-color: #36cc;
+            padding: 10px;
+            width: 100%;
+            min-height: 48px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 850px) {
+            .nav-desktop {
+                display: none;
+            }
+        }
+
+        .nav-logo {
+            padding: 0 0 0 25px;
+            width: auto;
+            height: 28px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+        }
+
+        .nav-logo:hover {
+            transform: translate(0, 0) scale(1.04);
+            transform-origin: center bottom;
+        }
+
+        .nav-separator {
+            margin: 0 15px;
+            background-color: #333333;
+            display: flex;
+            width: 1px;
+            height: 1.5em;
+        }
+
+        .nav-desktop ul {
+            padding: 0 20px 0 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            align-self: right;
+            min-height: inherit;
+            margin: 0 0 0 auto;
+        }
+
+        .nav-desktop li {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+        }
+
+        .feat-link a {
+            color: white;
+            padding: 5px 15px;
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            transition: all 0.3s;
+            transition-timing-function: ease;
+        }
+
+        .feat-link a:hover {
+            box-shadow: 2.5px 4px rgb(51, 51, 51);
+            transform: translate(-2px, -2px);
+        }
+
+        .grey-link a {
+            padding: 5px 15px;
+            font-size: 22px;
+            font-weight: 400;
+            display: flex;
+            color: white;
+            transition: all 0.3s;
+            transition-timing-function: ease-out;
+        }
+
+        .grey-link a:hover {
+            box-shadow: 2.5px 4px rgb(63, 178, 139);
+            transform: translate(0, -2px);
+        }
+
+        .nav-responsive {
+            background-color: white;
+            padding: 10px 15px;
+            width: 100vw;
+            min-height: 48px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-toggle {
+            cursor: pointer;
+        }
+
+        .menu-toggle i {
+            font-size: 24px;
+            color: #3366cc;
+        }
+
+        .overlay {
+            display: none;
+        }
+
+        .nav-logo-resp {
+            height: 32px;
+            width: 31px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            z-index: 2;
+        }
+
+        .menu {
+            display: none;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            padding: 15px 0;
+            text-align: center;
+        }
+
+       
+
+        .menu li a:hover {
+            color: #228B22;
+        }
+
+        .menu.active {
+            display: flex;
+        }
+
+        @media screen and (min-width: 850px) {
+            .nav-responsive {
+                display: none;
+            }
+        }
+        #correos {
+            height: 40px; /* Ajusta la altura según sea necesario */
+            background-color: white     ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-sizing: border-box;
+            color: black;
+            font-size: 14px;
+        }
+        .contacto-item {
+            display: flex;
+            align-items: center;
+        }
+         .contacto-item img {
+            width: 20px; /* Ajusta el tamaño de las imágenes según sea necesario */
+            height: 20px;
+            margin-right: 5px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   body {
+          font-family: "Roboto", sans-serif;
+
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url('/imagenes/luxa.org-opacity-changed-contador.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.header-content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header h6 {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+}
+
+header button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #34a075;
+}
+
+.contact-info {
+    background-color: #f4e1d2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    margin: 10px 20px;
+    transition: transform 0.3s;
+}
+
+.contact-item:hover {
+    transform: scale(1.05);
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #228B22;
+}
+
+.contacto {
+    padding: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.contacto h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.contacto h4:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #228B22;
+    margin: 10px auto 0;
+}
+
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-outer {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.flex-outer li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.flex-outer li label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.flex-outer li input,
+.flex-outer li textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.flex-outer li.center {
+    text-align: center;
+}
+
+.flex-outer li.center button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.flex-outer li.center button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #4CAF50;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+
+* {
+    box-sizing: border-box;
+   }
+
+
+a {
+    text-decoration: none;
+    color: #333333;
+  }
+
+h1 {
+    font-size: 2rem;
+     }
+
+h2 {
+    font-size: 1.75rem;
+  }
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
+   }
+
+h4 {
+    font-size: 1.25rem;
+  }
+
+h5 {
+    font-size: 1.125rem;
+  }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 300;
+    width: auto;
+    height: auto;
+}
+    header {
+            background-color: white;
+            background-image: url('imagenes/luxa.org-opacity-changed-contador.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 0;
+            width: 100%;
+            min-height: 25vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .header-content {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        header h4 {
+            position: relative;
+            color: white;
+            font-weight: lighter;
+            font-size: 2.7vw;
+            margin: 0;
+            left: 5%;
+        }
+
+  header h6 {
+        color: white;
+        font-weight: lighter;
+        font-size: 1.9vw;
+        margin: 20px 0 0 0; /* Añadir margen superior para separar del h4 */
+        position: relative;
+        right: 0; /* Centramos de nuevo quitando el desplazamiento */
+    }
+        header button {
+            background-color: #228B22;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2vw;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header button:hover {
+            background-color: #34a075;
+        }
+
+.nav-desktop {
+    background-color: #3366cc;
+    padding: 10px;
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+.nav-logo {
+    /*5background-color: aqua;*/
+    padding: 0 0 0 25px;
+    width: auto;
+    height: 28px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+}
+
+.nav-logo:hover {
+    transform: translate(0, 0) scale(1.04);
+    transform-origin: center bottom;
+}
+
+.nav-logo svg:hover {
+    box-shadow: 5px 10px 10px rgba(56, 56, 56, 1);
+}
+
+.nav-separator {
+    margin: 0 15px;
+    background-color: #333333;
+    display: flex;
+    width: 1px;
+    height: 1.5em;
+}
+
+.nav-desktop ul {
+    padding: 0 20px 0 0;
+    /*background-color: aquamarine;*/
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: right;
+    min-height: inherit;
+    margin: 0 0 0 auto;
+  }
+
+.nav-desktop li {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+.feat-link a {
+        color: white;
+
+    padding: 5px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    border-style: 1px solid black;
+    transition: all 0.3s;
+    transition-timing-function: ease;
+
+  }
+
+.feat-link a:hover {
+    box-shadow: 2.5px 4px rgb(51, 51, 51);
+    transform: translate(-2px, -2px);
+    border-style: 1px solid black;
+    /* font-weight: 600; */
+  }
+
+.grey-link a {
+    padding: 5px 15px;
+    font-size: 22px;
+    font-weight: 400;
+    display: flex;
+    color: white;
+    transition: all 0.3s;
+    transition-timing-function: ease-out;
+    /*align-items: center;*/
+  }
+
+.grey-link a:hover {
+    /* font-weight: 500; */
+    box-shadow: 2.5px 4px rgb(63, 178, 139);
+    transform: translate(0, -2px);
+  }
+
+.nav-responsive {
+    background-color: white;
+    padding: 10px 15px;
+    width: 100vw;
+    min-height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav-logo-resp {
+    background-image: url(assets/icons/errotuz_logo_resp.svg);
+    /* background-color: #333; */
+    height: 32px;
+    width: 31px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    z-index: 2;
+}
+
+/* .nav-logo-resp a {
+    display: flex;
+} */
+
+.hamburger {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f1f1f1;
+    height: 21px;
+    width: 32px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    cursor: pointer;
+}
+
+.rectangle {
+  display: flex;
+  background-color: #bbbbbb;
+  height: 4px;
+  width: 100%;
+}
+
+.dropdown-menu {
+    background-color: #f0f0f0;
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.dropdown-menu.visible {
+    background-color: #fff;
+    box-shadow: 4px 12px 20px rgba(3, 38, 43, 0.164); 
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s;
+    transition-timing-function: ease-out;
+    pointer-events: unset;
+}
+
+@media screen and (min-width: 850px) {
+    .nav-responsive {
+        display: none;
+    }
+
+    .dropdown-menu.visible {
+        display: none;
+    }
+
+}
+
+.dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown-menu li:active {
+    background-color: #3fb28b;
+}
+
+.dropdown-menu li:active a {
+    color: white;
+}
+#LOGO{
+width: 60%;
+height: 70%;
+
+}
+     @media only screen and (max-width: 768px) {
+          
+            }
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i');
+
+
+ 
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  
+ 
+    #ehas {
+        position: relative;
+        left: -84%;
+        top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+
+.nav-responsive {
+    background-color: #3366cc;
+    padding: 10px 20px;
+    width: 100vw;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger:hover .rectangle {
+    background-color: #fff;
+}
+
+.rectangle {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu.visible {
+    opacity: 1;
+    pointer-events: all;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown-menu li a:hover {
+    color: #3366cc;
+}
+
+@media screen and (max-width: 850px) {
+    .nav-desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .nav-responsive {
+        display: none;
+    }
+}
+
+.hamburger.open .rectangle:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .rectangle:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .rectangle:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-logo-resp img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-responsive a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-responsive a:hover {
+    color: #ffcc00;
+}
+
+
+
+
+.menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+
+
+.menu a:hover {
+    color: #f4f4f9;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.overlayy {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100%;
+        background: #413d4b;
+        transition: right 0.3s ease-in-out;
+        z-index: 10;
+        padding-top: 60px;
+    }
+
+    .menu li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .menu a {
+        font-size: 22px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.show {
+        right: 0;
+    }
+
+    .overlay.show {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu {
+        display: flex !important;
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#servi{
+
+  z-index: 4;
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilos específicos para dispositivos móviles */
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    #myCarousel {
+        display: none; /* Oculta el carrusel en dispositivos móviles */
+    }
+
+    .mobile-header {
+      z-index: 999;
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        color: white;
+    }
+
+    .mobile-header img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Asegura que la imagen cubra el área disponible */
+    }
+
+  
+
+    /* Estilos para la navegación translúcida */
+    .nav-responsive {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+        z-index: 999; /* Asegura que la navegación esté por encima de la imagen */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+  
+
+   
+  
+
+
+   
+
+ 
+
+    .nav-responsive .overlay {
+
+        position: fixed;
+        top: 0;
+        left: 0;
+      
+        background: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+        z-index: 5;
+        display: none;
+    }
+
+    .nav-responsive .overlay.show {
+        display: block;
+    }
+}
+
+/* Estilos para escritorio */
+@media only screen and (min-width: 769px) {
+    .mobile-header {
+        display: none; /* Oculta la imagen estática en escritorio */
+    }
+
+    .nav-responsive {
+        display: none; /* Oculta la navegación responsive en escritorio */
+    }
+    #corro{
+
+    }
+    
+footer{
+    display: none;
+}
+
+h6{
+
+font-size: 100px;
+
+}
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .foooter{
+        display: none;
+    }
+
+h6{
+
+font-size: 100px;
+
+}
+
+
+#correos{
+display: none;
+}
+
+
+
+
+.footer{
+    display: none;
+}
+
+
+
+
+
+
+ }
+
+
+/* Media query para dispositivos móviles */
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .inner-text {
+    font-size: 1.2em; /* Ajusta el tamaño del texto */
+    padding: 20px;    /* Ajusta el relleno */
+    max-width: 100%;  /* Asegura que las cartas ocupen todo el ancho disponible */
+    min-height: 300px; /* Ajusta la altura mínima de las cartas */
+    box-sizing: border-box; /* Asegura que el relleno esté incluido en el tamaño total */
+  }
+
+  .service-icon {
+    font-size: 2.5em; /* Ajusta el tamaño del icono */
+    margin-bottom: 15px; /* Ajusta el margen inferior del icono */
+  }
+
+  .inner-text h3 {
+    font-size: 1.5em; /* Ajusta el tamaño del título */
+    margin: 10px 0; /* Ajusta el margen */
+  }
+
+  .text-box h5 {
+    font-size: 1em; /* Ajusta el tamaño del subtítulo */
+    margin: 10px 0; /* Ajusta el margen */
+  }
+
+  .text-box p {
+    font-size: 0.9em; /* Ajusta el tamaño del párrafo */
+    margin: 5px 0; /* Ajusta el margen */
+  }
+  header{
+position: relative;
+top: 50px;
+  }
+
+.footer-content{
+    display: none;
+}
+
+
+.contact-info{
+    position: relative;
+    top: 50px;
+}
+h6{
+
+font-size: 100px;
+
+}
+  header h6 {
+        color: white;
+        font-weight: lighter;
+        font-size: 5.9vw;
+        margin: 20px 0 0 0; /* Añadir margen superior para separar del h4 */
+        position: relative;
+        right: 0; /* Centramos de nuevo quitando el desplazamiento */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.menu li {
+    border-bottom: 1px solid #FEFFFF; /* Línea blanca */
+    width: 100%;
+}
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: #FEFFFF;
+    margin: 0 10px;
+    line-height: 70px;
+    letter-spacing: .9px;
+    
+    text-transform: uppercase;
+    transition: all 250ms ease;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+
+    background-color: #FEFFFF;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+
+.menu-toggle i {
+    font-size: 24px;
+    color: white;
+}
+
+
+
+
+
+    </style>
+    
+
+
+        <section id="correos">
+        <div class="contacto-item">
+            <img src="imagenes/gmail.png" alt="Correo">
+            <h5 id="micorreo">andreafrancocontadora@gmail.com</h5>
+        </div>
+        <div class="contacto-item">
+            <img src="imagenes/llamada.png" alt="Teléfono">
+            <span>3223958005 </span>
+        </div>
+    </section>
+
+    
+    <nav class="nav-desktop">
+        <a href="index.html">
+            <div class="logo-box">
+                <img class="nav-logo" id="LOGO" src="imagenes/LOGO JENIFER.png" alt="Logo">
+            </div>
+        </a>
+        <ul>
+            <li class="feat-link"><a href="/principal">INICIO</a></li>
+            <li class="feat-link"><a href="/servicios">SERVICIOS</a></li>
+            <div class="nav-separator"></div>
+            <li class="grey-link"><a href="/informacion">INFORMACIÓN</a></li>
+            <li class="grey-link"><a href="/contacto">CONTÁCTENOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menú Hamburguesa para móviles -->
+    <nav class="nav-responsive">
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <img class="nav-logo" id="LOGO" src="/imagenes/LOGOJENIFEEER-removebg-preview.png" alt="Logo">
+        <div class="overlay" id="overlay"></div>
+        <div class="container">
+            <ul class="menu" id="menu">
+                <li><a href="/principal">Inicio</a></li>
+                <li><a href="/servicios">Servicios</a></li>
+                <li><a href="/informacion">Nosotros</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1>Información de Servicios</h1>
+            <p>Asesorías contables, tributarias, propiedad horizontal y revisoría fiscal.</p>
+        </div>
+    </header>
+    
+    <section class="container">
+        <div class="content">
+            <h2>Sobre Nosotros</h2>
+            <p>Contadora pública con alto grado de responsabilidad, proactividad, honestidad, comprometida con su trabajo, con espíritu de liderazgo, progreso y superación permanente. Gran facilidad y asimilación para brindar soluciones justas e inmediatas, enorme compromiso de entregar todo mi conocimiento y disposición al servicio y los objetivos en pro de la compañía.</p>
+
+            <h3>Objetivo</h3>
+            <p>Prestar un servicio de asesoría y acompañamiento que le permita tanto a usted como a la empresa que lidera, buscar mecanismos de eficiencia y eficacia, confiabilidad en la información financiera y cumplimiento en las disposiciones normativas.</p>
+
+            <h3>Experiencia</h3>
+            <p>Durante mi experiencia laboral he tenido un alto grado de conocimiento en todos los ámbitos empresariales conociendo las necesidades del mismo. Soy una persona enfocada al logro con gran capacidad comercial, administrativa y siempre enfocada al éxito.</p>
+
+            <h3>Garantías</h3>
+            <p>Garantizar que los registros financieros de la compañía se ajusten a los requerimientos de las normas contables, tributarias y comerciales; propiciar que la información contable sea comprensible, útil, comparable, pertinente y oportuna.</p>
+
+            <h3>Mantenimiento de la Contabilidad</h3>
+            <p>Mantenimiento de la contabilidad que incluye hacer, revisar y verificar todas las transacciones en el software proporcionado por parte de la compañía, cumpliendo con la normatividad de la ley, así como el aseguramiento eficiente de la información documental y digital.</p>
+
+            <h3>Objetivos Específicos</h3>
+            <ul>
+                <li>Velar que la información sea confiable y comprensible</li>
+                <li>Emitir las correspondientes certificaciones</li>
+                <li>Revisión de entradas y salidas tanto en bancos como en efectivo</li>
+                <li>Conciliación bancaria</li>
+                <li>Conciliación de cartera</li>
+                <li>Conciliación de proveedores</li>
+                <li>Realizar la correcta causación para pago de impuestos</li>
+                <li>Elaboración de planillas (seguridad social) como lo exige la norma</li>
+                <li>Presentación de todas las declaraciones tributarias pertinentes</li>
+                <li>Balances e informes anuales (o cuando lo requiere la empresa)</li>
+            </ul>
+        </div>
+        <div class="image-section">
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Servicios Contables. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("hamburger").addEventListener("click", function() {
+            var menu = document.getElementById("menu");
+            var overlay = document.getElementById("overlay");
+            menu.classList.toggle("active");
+            overlay.classList.toggle("active");
+        });
+
+        document.getElementById("overlay").addEventListener("click", function() {
+            var menu = document.getElementById("menu");
+            var overlay = document.getElementById("overlay");
+            menu.classList.toggle("active");
+            overlay.classList.toggle("active");
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    const overlayy = document.getElementById('overlayy');
+
+    menuToggle.addEventListener('click', function () {
+        menu.classList.toggle('show');
+        overlayy.classList.toggle('show');
+    });
+
+    overlay.addEventListener('click', function () {
+        menu.classList.remove('show');
+        overlayy.classList.remove('show');
+    });
+});
+    </script>
+</body>
+</html>
